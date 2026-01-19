@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Generador de Páginas Web de Congresos</title>
+    </head>
+    <body>
+        <h1>Generador de Páginas Web de Congresos</h1>
+        <h2>Rellena el contenido de la pestaña Committees de tu web</h2>
+        
+        Workshop chairs (Ver cual es la traduccion y meter la variabilidad de modo que pueda ser tanto para workshop como para un congreso grande) *
+        <div class="contenedor-wchairs">
+            <div class="wchairs">
+                <p>
+                    Workshop chair *
+                    <INPUT TYPE="text" NAME="Workshop chair content">
+                </p>        
+            </div>
+            <button class="anadirWchair">mas</button>
+            <button class="quitarWchair">menos</button>
+        </div>
+
+        Program chairs *
+        <div class="contenedor-pchairs">
+            <div class="pchairs">
+                <p>
+                    Program chair *
+                    <INPUT TYPE="text" NAME="Program chair content">
+                </p>        
+            </div>
+            <button class="anadirPchair">mas</button>
+            <button class="quitarPchair">menos</button>
+        </div>
+
+        Comites adicionales *
+        <div class="contenedor-comites">
+            <div class="comites">
+                <p>
+                    Nombre del comite *
+                    <INPUT TYPE="text" NAME="Committee title">
+                </p>
+                Componentes del comite
+                <div class="contenedor-cchairs">
+                    <div class="cchairs">
+                        <p>
+                            Componente del comite
+                            <INPUT TYPE="text" NAME="Committee content">
+                        </p>
+                    </div>
+                    <button class="anadirChair">mas Chair</button>
+                    <button class="quitarChair">menos</button>
+                </div>
+            </div>
+            <button class="anadirComite">mas</button>
+            <button class="quitarComite">menos</button>
+        </div>
+
+        <a href="caracteristicas-history.html">
+        <button>Pulse aquí para continuar</button>
+        </a>
+
+        <script src="committees.js"></script>
+    </body>
+</html>

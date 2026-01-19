@@ -1,0 +1,165 @@
+namespace web
+
+features
+	web
+		mandatory
+			home {desc 'Home of the website'}
+				mandatory
+					String "Conference name" {desc 'Name of the conference'}
+					String "Conference date" {desc 'Date of the conference'}
+					String "Conference venue" {desc 'Venue of the conference'}
+					String "Conference format" {desc 'Format of the conference'}
+				optional
+					String headerimage {desc 'Image shown on the header of the home page'}
+					String logoimage {desc 'Logo of the conference'}
+					String "Short name for the conference" {desc 'Short title for the conference'}
+					aims {desc 'Section for the aims of the conference'}
+						mandatory
+							String aimscontent {desc 'Content for the aims section'}
+			callforpapers {desc 'Section Call for Papers'}
+				mandatory
+					cimportantdates cardinality [1..*] {desc 'Importan dates for this section'}
+						mandatory
+							String description {desc 'Description for the important date'}
+							String cdate {desc 'Date of the important date'}
+					sections cardinality [1..*] {desc 'Sections for Call for Papers'}
+						mandatory
+							String sectitle {desc 'Title for the section'}
+							String seccontent {desc 'Content for the section'}
+						optional
+							subsections cardinality [1..*] {desc 'Subsections for the section'}
+								mandatory
+									String subsectitle {desc 'Title for the subsection'}
+									String subseccontent {desc 'Content for the subsection'}
+							String seccontent2 {desc 'Further content for the section'}
+			program {desc 'Section Program'}
+				mandatory
+					String "Program information" {desc 'Information for the program section'}
+					"Days of the conference" cardinality [1..*] {desc 'Days of which are composed the program of the conference'}
+						mandatory
+							String "Day information" {desc 'Information for the day'}
+							events cardinality [1..*] {desc 'Events of the day'}
+								mandatory
+									String timelapse {desc 'Timelapse of the event'}
+									String eventscontent {desc 'Content of the event'}
+				optional
+					"Further program information" {desc 'Further information for the program'}
+						mandatory
+							String "Further program information title" {desc 'Further program information title'}
+							String "Further program information content" {desc 'Further program information content'}
+			registration {desc 'Section Registration'}
+				mandatory
+					"Registration deadlines" cardinality [1..*] {desc 'Registration deadlines'}
+						mandatory
+							String "Deadline title" {desc 'Deadline title'}
+							String "Deadline timelapse" {desc 'Deadline timelapse'}
+					String "Registration link" {desc 'Registration link'}
+					"Registration fees" {desc 'Registration fees'}
+						mandatory
+							"Registration packages" cardinality [1..*] {desc 'Registration packages'}
+								mandatory
+									String "Package name" {desc 'Package name'}
+								alternative
+									"Registration category" cardinality [1..*] {desc 'Registration category'}
+										mandatory
+											String "Category name" {desc 'Category name'}
+											"Registration deadlines table" cardinality [1..*] {desc 'Registration deadlines to be set in the table'}
+												mandatory
+													Integer "Registration cost" {desc 'Registration cost'}
+									"Registration deadlines table" cardinality [1..*] {desc ''}
+										mandatory
+											Integer "Registration cost" {desc 'Registration cost'}
+						optional
+							String "Registration fees info" {desc 'Registration fees info'}
+				optional
+					String "Registration status" {desc 'Registration status'}
+					"Registration further info" {desc 'Registration further info'}
+						mandatory
+							String "Registration further info title" {desc 'Registration further info title'}
+							String "Registration further info content" {desc 'Registration further info content'}
+		optional
+			sponsors {desc 'Conference sponsors'}
+				mandatory
+					"Conference sponsors" cardinality [1..*] {desc 'Conference sponsors'}
+						mandatory
+							String "Sponsor url" {desc 'Sponsor url'}
+							String "Sponsor logo" {desc 'Sponsor logo'}
+							String "Sponsor name" {desc 'Sponsor name'}
+			proceedings {desc 'Section proceedings'}
+				mandatory
+					"Proceedings information" {desc 'Proceedings information'}
+			awards {desc 'Section awards'}
+				mandatory
+					String "Awards information" {desc 'Awards information'}
+					"Conference awards" cardinality [1..*] {desc 'Conference awards'}
+						mandatory
+							String "Award title" {desc 'Award title'}
+							String "Award content" {desc 'Award content'}
+			keynotes {desc 'Section keynotes'}
+				mandatory
+					"Keynotes information" {desc 'Keynotes information'}
+			venue {desc 'Section venue'}
+				mandatory
+					String "Exact location" {desc 'Exact location'}
+					String "Street location" {desc 'Street location'}
+				optional
+					String "Venue information" {desc 'Venue information'}
+			committees {desc 'Section committees'}
+				mandatory
+					"Workshop chairs" cardinality [1..*] {desc 'Workshop chairs'}
+						mandatory
+							String "Workshop chair content" {desc 'Workshop chair content'}
+					"Program committee" cardinality [1..*] {desc 'Program committee'}
+						mandatory
+							String "Program chair content" {desc 'Program chair content'}
+				optional
+					"Other committees" cardinality [1..*] {desc 'Other committees'}
+						mandatory
+							String "Committee title" {desc 'Committee title'}
+							"Committee chairs" cardinality [1..*] {desc 'Committee chairs'}
+								mandatory
+									String "Committee content" {desc 'Committee content'}
+			history {desc 'Section history'}
+				mandatory
+					String "History information" {desc 'History info'}
+					"History events" cardinality [1..*] {desc 'History events'}
+						mandatory
+							String "History event title" {desc 'History event title'}
+							String "History event venue" {desc 'History event venue'}
+							String "History event content" {desc 'History event content'}
+			importantdates {desc 'Section important dates'}
+				mandatory
+					idates cardinality [1..*] {desc 'Important dates'}
+						mandatory
+							String "Important date action" {desc 'Important date action'}
+							String "Important date date" {desc 'Important date date'}
+constraints
+	"Registration cost" > 0
+	len("Conference name") < 250
+	len("Conference date") < 100
+	len("Conference venue") < 250
+	len("Conference format") < 100
+	len("Short name for the conference") < 100
+	len(description) < 50
+	len(cdate) < 50
+	len(sectitle) < 50
+	len(subsectitle) < 50
+	len("Day information") < 50
+	len(timelapse) < 50
+	len(eventscontent) < 50
+	len("Further program information title") < 150
+	len("Deadline title") < 150
+	len("Deadline timelapse") < 150
+	len("Package name") < 200
+	len("Category name") < 150
+	len("Registration status") < 50
+	len("Registration further info title") < 150
+	len("Award title") < 150
+	len("Workshop chair content") < 150
+	len("Program chair content") < 150
+	len("Committee title") < 150
+	len("Committee content") < 150
+	len("History event title") < 150
+	len("History event venue") < 150
+	len("Important date action") < 250
+	len("Important date date") < 150

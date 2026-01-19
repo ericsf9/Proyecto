@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Generador de Páginas Web de Congresos</title>
+    </head>
+    <body>
+        <h1>Generador de Páginas Web de Congresos</h1>
+        <h2>Rellena el contenido de la pestaña Call for Papers de tu web</h2>
+
+        Fechas importantes *
+        <div class="contenedor-fechas">
+            <div class="fechas">
+                <p>
+                    Descripción *
+                    <INPUT TYPE="text" NAME="description">
+                </p>
+                <p>
+                    Fecha *
+                    <INPUT TYPE="text" NAME="cdate">
+                </p>
+            </div>
+            <button class="anadirFecha">mas</button>
+            <button class="quitarFecha">menos</button>
+        </div>
+        
+        Secciones *
+        <div class="contenedor-secciones">
+            <div class="secciones">
+                <p>
+                    Título *
+                    <INPUT TYPE="text" NAME="sectitle">
+                </p>
+                <p>
+                    Contenido *
+                    <INPUT TYPE="text" NAME="seccontent">
+                </p>
+                Subsecciones
+                <div class="contenedor-subsecciones">
+                    <div class="subsecciones">
+                        <p>
+                            Título s *
+                            <li><INPUT TYPE="text" NAME="subsectitle">
+                        </p>
+                        <p>
+                            Contenido s *
+                            <li><INPUT TYPE="text" NAME="subseccontent">
+                        </p>
+                    </div>
+                    <button class="anadirSubseccion">mas Sub</button>
+                    <button class="quitarSubseccion">menos</button>
+                </div>
+                <p>
+                    Contenido Adicional*
+                    <INPUT TYPE="text" NAME="seccontent2">
+                </p>
+            </div>
+            <button class="anadirSeccion">mas</button>
+            <button class="quitarSeccion">menos</button>
+        </div>
+
+
+        <a href="caracteristicas-program.html">
+        <button>Pulse aquí para continuar</button>
+        </a>
+
+        <script src="callforpapers.js"></script>
+    </body>
+</html>

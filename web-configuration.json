@@ -1,0 +1,305 @@
+{
+    "file": "web_fm.uvl",
+    "config": {
+        "home": {
+            "Conference name": "XVII Congreso de variabilidad",
+            "Conference date": "15-16 October, 2026",
+            "Conference venue": "Malaga, Spain",
+            "Conference format": "Onsite",
+            "headerimage": "assets/confws/bg_bologna.jpg",
+            "logoimage": "assets/confws/confws-2025-logo.png",
+            "aims": {
+                "aimscontent": "Hola buenas esto seria el contenido de los objetivos..."
+            }
+        },
+        "callforpapers": { "cimportantdates" : [
+            {
+                "description": "Publicacion",
+                "cdate": "10 de Septiembre 2026"
+            },
+            {
+                "description": "Apertura de inscripciones",
+                "cdate": "20 de Septiembre 2026"
+            },
+            {
+                "description": "Inicio congreso",
+                "cdate": "15-16 de Octubre 2026"
+            }
+        ],
+        "sections": [
+        {
+            "sectitle":"Overview",
+            "seccontent":"Este seria el contenido de la seccion"
+        },
+        {
+            "sectitle":"Topics of interest",
+            "seccontent":"Este seria el contenido de la seccion",
+            "subsections":[
+                {
+                    "subsectitle":"Subseccion 1",
+                    "subseccontent":"Contenido de la subseccion 1"
+                },
+                {
+                    "subsectitle":"Subseccion 2",
+                    "subseccontent":"Contenido de la subseccion 2"
+                },
+                {
+                    "subsectitle":"Subseccion 3",
+                    "subseccontent":"Contenido de la subseccion 3"
+                }
+            ],
+            "seccontent2":"Contenido posterior a las subsecciones..."
+        }
+        ]},
+        "program":{
+            "Program information":"Informacion previa para el programa...",
+            "Days of the conference": [
+                {
+                    "Day information":"Thursday, 15th October 2026",
+                    "events":[
+                        {
+                            "timelapse":"9:00 - 10:00",
+                            "eventscontent":"Evento 1"
+                        },
+                        {
+                            "timelapse":"10:00 - 11:00",
+                            "eventscontent":"Evento 2"
+                        },
+                        {
+                            "timelapse":"11:00 - 12:00",
+                            "eventscontent":"Evento 3"
+                        }
+                    ]
+                },
+                {
+                    "Day information":"Friday, 16th October 2026",
+                    "events":[
+                        {
+                            "timelapse":"9:00 - 10:00",
+                            "eventscontent":"Evento 1"
+                        },
+                        {
+                            "timelapse":"10:00 - 11:00",
+                            "eventscontent":"Evento 2"
+                        },
+                        {
+                            "timelapse":"11:00 - 12:00",
+                            "eventscontent":"Evento 3"
+                        }
+                    ]
+                }
+            ],
+            "Further program information":{
+                "Further program information title":"Mas Informacion",
+                "Further program information content":"Este es el contenido de la Informacion adicional"
+            }
+        },
+        "registration":{
+            "Registration deadlines":[
+                {
+                    "Deadline title":"Registro Temprano",
+                    "Deadline timelapse":"From September 10 to September 20, 2026"
+                },
+                {
+                    "Deadline title":"Registro Normal",
+                    "Deadline timelapse":"From September 20 to September 30, 2026"
+                },
+                {
+                    "Deadline title":"Registro Presencial",
+                    "Deadline timelapse":"From October 13 to October 20, 2026"
+                }
+            ],
+            "Registration link":"ESTE SERIA EL LINK!!!",
+            "Registration fees":{
+                "Registration packages":[
+                    {
+                        "Package name":"Solo fin de semana",
+                        "Registration category":[
+                            {
+                                "Category name":"Miembro",
+                                "Registration deadlines table":[
+                                    {
+                                        "Registration cost":40
+                                    },
+                                    {
+                                        "Registration cost":50
+                                    },
+                                    {
+                                        "Registration cost":60
+                                    }
+                                ]
+                            },
+                            {
+                                "Category name":"No miembro",
+                                "Registration deadlines table":[
+                                    {
+                                        "Registration cost":80
+                                    },
+                                    {
+                                        "Registration cost":100
+                                    },
+                                    {
+                                        "Registration cost":120
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Package name":"Fin de semana y conferencia principal",
+                        "Registration category":[
+                            {
+                                "Category name":"Miembro",
+                                "Registration deadlines table":[
+                                    {
+                                        "Registration cost":60
+                                    },
+                                    {
+                                        "Registration cost":70
+                                    },
+                                    {
+                                        "Registration cost":80
+                                    }
+                                ]
+                            },
+                            {
+                                "Category name":"No miembro",
+                                "Registration deadlines table":[
+                                    {
+                                        "Registration cost":100
+                                    },
+                                    {
+                                        "Registration cost":120
+                                    },
+                                    {
+                                        "Registration cost":140
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Registration fees info":"Aqui la informacion de los precios"
+            },
+            "Registration status":"Las inscripciones estan abiertas!!!",
+            "Registration further info":{
+                "Registration further info title":"Informacion adicional",
+                "Registration further info content":"Aqui el contenido adicional..."
+            }
+        },
+        "sponsors":{
+            "Conference sponsors":[
+                {
+                    "Sponsor url":"ESTA SERIA LA URL DEL SPONSOR",
+                    "Sponsor logo":"/assets/confws/sapienza.svg",
+                    "Sponsor name":""
+                }
+            ]
+        },
+        "proceedings": {
+            "Proceedings information":"Esta seria la informacion de proceedings..."
+        },
+        "awards": {
+            "Awards information":"Los premios de la conferencia de este año son:",
+            "Conference awards":[
+                {
+                    "Award title":"Premio al mejor programador",
+                    "Award content":"El ganador es Eric"
+                },
+                {
+                    "Award title":"Premio al mejor tester",
+                    "Award content":"El ganador es Eric"
+                },
+                {
+                    "Award title":"Premio a la mejor variabilidad",
+                    "Award content":"El ganador es Eric"
+                },
+                {
+                    "Award title":"Premio al mejor programador junior",
+                    "Award content":"El ganador es Eric"
+                }
+            ]
+        },
+        "keynotes": {
+            "Keynotes information":"Esta seria la informacion de keynotes..."
+        },
+        "venue": {
+            "Exact location":"Sala 3.0.8 de la Escuela Tecnica Superior de Ingenieria Informatica, Universidad de Malaga",
+            "Street location":"Boulevard Louis Pasteur, 376, Malaga",
+            "Venue information":"La conferencia de este año sera recogida en la Universidad de Malaga, mas concretamente:"
+        },
+        "committees": {
+            "Workshop chairs":[
+                {
+                    "Workshop chair content":"Manuel"
+                },
+                {
+                    "Workshop chair content":"Paco"
+                }
+            ],
+            "Program committee":[
+                {
+                    "Program chair content":"Antonio"
+                },
+                {
+                    "Program chair content":"Fran"
+                },
+                {
+                    "Program chair content":"Alfonso"
+                },
+                {
+                    "Program chair content":"Gonzalo"
+                }
+            ],
+            "Other committees":[
+                {
+                    "Committee title":"Otro comite",
+                    "Committee chairs":[
+                        {
+                            "Committee content":"Miguel"
+                        },
+                        {
+                            "Committee content":"Luis"
+                        }
+                    ]
+                }
+            ]
+        },
+        "history":{
+            "History information":"Esta es la historia de esta conferencia:",
+            "History events":[
+                {
+                    "History event title":"XVI Congreso de variabilidad",
+                    "History event venue":"Sevilla, Spain. Sep 10-11, 2025",
+                    "History event content":"Congreso sobre variabilidad..."
+                },
+                {
+                    "History event title":"XV Congreso de variabilidad",
+                    "History event venue":"Berlin, Germany. Sep 10-11, 2024",
+                    "History event content":"Congreso sobre variabilidad..."
+                },
+                {
+                    "History event title":"XIV Congreso de variabilidad",
+                    "History event venue":"Londres, England. Sep 10-11, 2023",
+                    "History event content":"Congreso sobre variabilidad..."
+                }
+            ]
+        },
+        "importantdates":{
+            "idates":[
+                {
+                    "Important date action":"Apertura de inscripciones",
+                    "Important date date":"10 de Septiembre 2026"
+                },
+                {
+                    "Important date action":"Cierre de inscripciones",
+                    "Important date date":"30 de Septiembre 2026"
+                },
+                {
+                    "Important date action":"Inicio del congreso",
+                    "Important date date":"15 de Octubre 2026"
+                }
+            ]
+        }
+    }
+}

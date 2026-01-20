@@ -1,0 +1,48 @@
+# Academic Event
+
+# main links
+main:
+    {% if home %}
+  - title: "Home"
+    url: /
+    {% endif %}
+    {% if callforpapers %}
+  - title: "Call for Papers"
+    url: /call-for-papers/
+    {% endif %}
+    {% if dates %}    
+  - title: "Important Dates"
+    url: /dates/
+    {% endif %}
+    {% if program %}     
+  - title: "Program"
+    url: /program/
+    {% endif %}
+    {% if proceedings %}
+  - title: "Proceedings"
+    url: /proceedings/
+    {% endif %}
+    {% if awards %}
+  - title: "Awards"
+    url: /awards/
+    {% endif %}
+    {% if keynotes %}
+  - title: "Keynotes"
+    url: /keynotes/
+    {% endif %}
+    {% if registration %}
+  - title: "Registration"
+    url: /registration/
+    {% endif %}
+    {% if venue %}
+  - title: "Venue"
+    url: /venue/
+    {% endif %}
+    {% if committees %}   
+  - title: "Committees"
+    url: /committees/
+    {% endif %}
+    {% if history %}    
+  - title: "History"
+    url: /history/
+    {% endif %}

@@ -1,0 +1,11 @@
+    {% if sponsors %}
+        {% for sponsor in sponsors['Conference sponsors'] %}
+          {% if sponsor['Sponsor logo'] %}
+          <div class="author__avatar">
+            <a href="{{sponsor['Sponsor url']}}">
+              <img src="{{sponsor['Sponsor logo']}}" alt="{{sponsor['Sponsor name']}}" itemprop="image" class="u-photo">
+            </a>
+          </div>
+          {% endif %}
+        {% endfor %}
+    {% endif %}

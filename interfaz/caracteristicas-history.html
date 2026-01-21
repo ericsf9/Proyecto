@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña History de tu web</h2>
         
+        <form method="post" action="/important-dates">
         <p>
             Información de la historia del congreso *
             <INPUT TYPE="text" NAME="History information">
@@ -30,14 +31,13 @@
                     <INPUT TYPE="text" NAME="History event content">
                 </p>        
             </div>
-            <button class="anadirEvento">mas</button>
-            <button class="quitarEvento">menos</button>
+            <button class="anadirEvento" type="button">mas</button>
+            <button class="quitarEvento" type="button">menos</button>
         </div>
 
-        <a href="caracteristicas-important-dates.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="history.js"></script>
+        <script src="{{ url_for('static', filename='history.js') }}"></script>
     </body>
 </html>

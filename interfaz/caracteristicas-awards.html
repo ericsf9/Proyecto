@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña Awards de tu web</h2>
         
+        <form method="post" action="/keynotes">
         <p>
             Información de los premios *
             <INPUT TYPE="text" NAME="Awards information">
@@ -26,14 +27,13 @@
                     <INPUT TYPE="text" NAME="Award content">
                 </p>        
             </div>
-            <button class="anadirPremio">mas</button>
-            <button class="quitarPremio">menos</button>
+            <button class="anadirPremio" type="button">mas</button>
+            <button class="quitarPremio" type="button">menos</button>
         </div>
 
-        <a href="caracteristicas-keynotes.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="awards.js"></script>
+        <script src="{{ url_for('static', filename='awards.js') }}"></script>
     </body>
 </html>

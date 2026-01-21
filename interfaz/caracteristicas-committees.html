@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña Committees de tu web</h2>
         
+        <form method="post" action="/history">
         Workshop chairs (Ver cual es la traduccion y meter la variabilidad de modo que pueda ser tanto para workshop como para un congreso grande) *
         <div class="contenedor-wchairs">
             <div class="wchairs">
@@ -16,8 +17,8 @@
                     <INPUT TYPE="text" NAME="Workshop chair content">
                 </p>        
             </div>
-            <button class="anadirWchair">mas</button>
-            <button class="quitarWchair">menos</button>
+            <button class="anadirWchair" type="button">mas</button>
+            <button class="quitarWchair" type="button">menos</button>
         </div>
 
         Program chairs *
@@ -28,8 +29,8 @@
                     <INPUT TYPE="text" NAME="Program chair content">
                 </p>        
             </div>
-            <button class="anadirPchair">mas</button>
-            <button class="quitarPchair">menos</button>
+            <button class="anadirPchair" type="button">mas</button>
+            <button class="quitarPchair" type="button">menos</button>
         </div>
 
         Comites adicionales *
@@ -47,18 +48,17 @@
                             <INPUT TYPE="text" NAME="Committee content">
                         </p>
                     </div>
-                    <button class="anadirChair">mas Chair</button>
-                    <button class="quitarChair">menos</button>
+                    <button class="anadirChair" type="button">mas Chair</button>
+                    <button class="quitarChair" type="button">menos</button>
                 </div>
             </div>
-            <button class="anadirComite">mas</button>
-            <button class="quitarComite">menos</button>
+            <button class="anadirComite" type="button">mas</button>
+            <button class="quitarComite" type="button">menos</button>
         </div>
 
-        <a href="caracteristicas-history.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="committees.js"></script>
+        <script src="{{ url_for('static', filename='committees.js') }}"></script>
     </body>
 </html>

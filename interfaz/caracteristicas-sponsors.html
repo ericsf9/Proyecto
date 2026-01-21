@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de los Sponsors de tu web</h2>
         
+        <form method="post" action="/proceedings">
         Sponsors del congreso *
         <div class="contenedor-sponsors">
             <div class="sponsors">
@@ -24,14 +25,13 @@
                     <INPUT TYPE="text" NAME="Sponsor name">
                 </p>        
             </div>
-            <button class="anadirSponsor">mas</button>
-            <button class="quitarSponsor">menos</button>
+            <button class="anadirSponsor" type="button">mas</button>
+            <button class="quitarSponsor" type="button">menos</button>
         </div>
 
-        <a href="caracteristicas-proceedings.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="sponsors.js"></script>
+        <script src="{{ url_for('static', filename='sponsors.js') }}"></script>
     </body>
 </html>

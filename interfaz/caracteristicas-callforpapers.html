@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña Call for Papers de tu web</h2>
 
+        <form method="post" action="/program">
         Fechas importantes *
         <div class="contenedor-fechas">
             <div class="fechas">
@@ -20,8 +21,8 @@
                     <INPUT TYPE="text" NAME="cdate">
                 </p>
             </div>
-            <button class="anadirFecha">mas</button>
-            <button class="quitarFecha">menos</button>
+            <button class="anadirFecha" type="button">mas</button>
+            <button class="quitarFecha" type="button">menos</button>
         </div>
         
         Secciones *
@@ -47,23 +48,22 @@
                             <li><INPUT TYPE="text" NAME="subseccontent">
                         </p>
                     </div>
-                    <button class="anadirSubseccion">mas Sub</button>
-                    <button class="quitarSubseccion">menos</button>
+                    <button class="anadirSubseccion" type="button">mas Sub</button>
+                    <button class="quitarSubseccion" type="button">menos</button>
                 </div>
                 <p>
                     Contenido Adicional*
                     <INPUT TYPE="text" NAME="seccontent2">
                 </p>
             </div>
-            <button class="anadirSeccion">mas</button>
-            <button class="quitarSeccion">menos</button>
+            <button class="anadirSeccion" type="button">mas</button>
+            <button class="quitarSeccion" type="button">menos</button>
         </div>
 
 
-        <a href="caracteristicas-program.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="callforpapers.js"></script>
+        <script src="{{ url_for('static', filename='callforpapers.js') }}"></script>
     </body>
 </html>

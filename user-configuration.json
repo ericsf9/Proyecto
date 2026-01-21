@@ -1,0 +1,82 @@
+{
+	"file": "web_fm.uvl",
+	"config": 
+	{
+    "awards": {
+        "Award content": "",
+        "Award title": "",
+        "Awards information": ""
+    },
+    "callforpapers": {
+        "cdate": "",
+        "description": "",
+        "seccontent": "",
+        "seccontent2": "",
+        "sectitle": "",
+        "subseccontent": "",
+        "subsectitle": ""
+    },
+    "committees": {
+        "Committee content": "",
+        "Committee title": "",
+        "Program chair content": "",
+        "Workshop chair content": ""
+    },
+    "history": {
+        "History event content": "",
+        "History event title": "",
+        "History event venue": "",
+        "History information": ""
+    },
+    "home": {
+        "Conference date": "",
+        "Conference format": "",
+        "Conference name": "",
+        "Conference venue": "",
+        "Short name for the conference": "",
+        "aimscontent": "",
+        "headerimage": "",
+        "logoimage": ""
+    },
+    "importantdates": "",
+    "keynotes": {
+        "Keynotes information": ""
+    },
+    "proceedings": {
+        "Proceedings information": ""
+    },
+    "program": {
+        "Day information": "",
+        "Further program information content": "",
+        "Further program information title": "",
+        "Program information": "",
+        "eventscontent": "",
+        "timelapse": ""
+    },
+    "registration": {
+        "Category name": "",
+        "Deadline timelapse": "",
+        "Deadline title": "",
+        "Package name": "",
+        "Registration cost": "",
+        "Registration fees info": "",
+        "Registration further info content": "",
+        "Registration further info title": "",
+        "Registration status": ""
+    },
+    "sponsors": {
+        "Sponsor logo": "",
+        "Sponsor name": "",
+        "Sponsor url": ""
+    },
+    "venue": {
+        "Exact location": "",
+        "Street location": "",
+        "Venue information": ""
+    },
+    "important-dates": {
+        "Important date action": "",
+        "Important date date": ""
+    }
+}
+}

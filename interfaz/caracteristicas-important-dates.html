@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña Important Dates de tu web</h2>
 
+        <form method="post" action="/resumen-final">
         Fechas importantes *
         <div class="contenedor-idates">
             <div class="idates">
@@ -20,14 +21,13 @@
                     <INPUT TYPE="text" NAME="Important date date">
                 </p>        
             </div>
-            <button class="anadirIdate">mas</button>
-            <button class="quitarIdate">menos</button>
+            <button class="anadirIdate" type="button">mas</button>
+            <button class="quitarIdate" type="button">menos</button>
         </div>
 
-        <a href="resumen-final.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="important-dates.js"></script>
+        <script src="{{ url_for('static', filename='important-dates.js') }}"></script>
     </body>
 </html>

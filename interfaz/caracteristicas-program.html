@@ -8,12 +8,11 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña Program de tu web</h2>
 
+        <form method="post" action="/registration">
         <p>
             Información del programa *
             <INPUT TYPE="text" NAME="Program information">
         </p>
-
-        
         
         Días del congreso *
         <div class="contenedor-dias">
@@ -35,12 +34,12 @@
                             <INPUT TYPE="text" NAME="eventscontent">
                         </p>
                     </div>
-                    <button class="anadirEvento">mas</button>
-                    <button class="quitarEvento">menos</button>
+                    <button class="anadirEvento" type="button">mas</button>
+                    <button class="quitarEvento" type="button">menos</button>
                 </div>
             </div>
-            <button class="anadirDia">mas Dia</button>
-            <button class="quitarDia">menos</button>
+            <button class="anadirDia" type="button">mas Dia</button>
+            <button class="quitarDia" type="button">menos</button>
         </div>
 
         <p>
@@ -52,10 +51,9 @@
             <INPUT TYPE="text" NAME="Further program information content">
         </p>
 
-        <a href="caracteristicas-registration.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="program.js"></script>
+        <script src="{{ url_for('static', filename='program.js') }}"></script>
     </body>
 </html>

@@ -8,6 +8,7 @@
         <h1>Generador de Páginas Web de Congresos</h1>
         <h2>Rellena el contenido de la pestaña Registration de tu web</h2>
         
+        <form method="post" action="/sponsors">
         Fechas de Registro *
         <div class="contenedor-fechas">
             <div class="fechas">
@@ -20,8 +21,8 @@
                     <INPUT TYPE="text" NAME="Deadline timelapse">
                 </p>        
             </div>
-            <button class="anadirFecha">mas</button>
-            <button class="quitarFecha">menos</button>
+            <button class="anadirFecha" type="button">mas</button>
+            <button class="quitarFecha" type="button">menos</button>
         </div>
 
         Paquetes de Registro *
@@ -46,16 +47,16 @@
                                     <INPUT TYPE="text" NAME="Registration cost">
                                 </p>
                             </div>
-                            <button class="anadirPrecio">mas PR</button>
-                            <button class="quitarPrecio">menos</button>
+                            <button class="anadirPrecio" type="button">mas PR</button>
+                            <button class="quitarPrecio" type="button">menos</button>
                         </div>
                     </div>
-                    <button class="anadirCategoria">mas Cat</button>
-                    <button class="quitarCategoria">menos</button>
+                    <button class="anadirCategoria" type="button">mas Cat</button>
+                    <button class="quitarCategoria" type="button">menos</button>
                 </div>
             </div>
-            <button class="anadirPaquete">mas Pa</button>
-            <button class="quitarPaquete">menos</button>
+            <button class="anadirPaquete" type="button">mas Pa</button>
+            <button class="quitarPaquete" type="button">menos</button>
         </div>
 
 
@@ -78,10 +79,9 @@
             <INPUT TYPE="text" NAME="Registration further info content">
         </p>
 
-        <a href="caracteristicas-sponsors.html">
-        <button>Pulse aquí para continuar</button>
-        </a>
+        <button type="submit">Pulse aquí para continuar</button>
+        </form>
 
-        <script src="registration.js"></script>
+        <script src="{{ url_for('static', filename='registration.js') }}"></script>
     </body>
 </html>

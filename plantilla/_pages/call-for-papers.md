@@ -22,7 +22,7 @@ redirect_from:
 - **{{subsection.subsectitle}}** {{subsection.subseccontent}}
 {% endfor %}
 
-{{section.seccontent2}}
+{{section.seccontentp}}
 {% endfor %}
 
 <!--

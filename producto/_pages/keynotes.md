@@ -5,5 +5,3 @@ author_profile: true
 sitemap: false
 classes: wide
 ---
-
-Esta seria la informacion de keynotes...

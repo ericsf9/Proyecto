@@ -31,7 +31,7 @@ features
 								mandatory
 									String subsectitle {desc 'Title for the subsection'}
 									String subseccontent {desc 'Content for the subsection'}
-							String seccontent2 {desc 'Further content for the section'}
+							String seccontentp {desc 'Further content for the section'}
 			program {desc 'Section Program'}
 				mandatory
 					String "Program information" {desc 'Information for the program section'}

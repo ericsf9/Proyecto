@@ -3,22 +3,77 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
-        <h1>Generador de Páginas Web de Congresos</h1>
-        <h2>Selecciona las pestañas que deseas tener en tu página</h2>
-        <form method="post" action="/home">
-        <p>
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="sponsors">Sponsors
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="proceedings">Proceedings
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="awards">Awards
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="keynotes">Keynotes
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="venue">Venue
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="committees">Committees
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="history">History
-        <INPUT TYPE="checkbox" NAME="pestañas" VALUE="importantdates">Important dates
-        </p>
-        <button type="submit">Pulse aquí para continuar</button>
-        </form>
+        <div class="masthead">
+            <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
+            <h2>Selecciona las pestañas que deseas tener en tu página</h2>
+            <form method="post" action="/home">
+                <div class="pestanasp">
+                <div class="pestanasc">
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="sponsors">
+                    <span class="checkmark"></span>    
+                    Sponsors
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="proceedings">
+                    <span class="checkmark"></span>    
+                    Proceedings
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="awards">
+                    <span class="checkmark"></span>    
+                    Awards
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="keynotes">
+                    <span class="checkmark"></span>    
+                    Keynotes
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="venue">
+                    <span class="checkmark"></span>    
+                    Venue
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="committees">
+                    <span class="checkmark"></span>    
+                    Committees
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="history">
+                    <span class="checkmark"></span>    
+                    History
+                    </label>
+                </p>
+                <p>
+                    <label class="checkp">
+                    <INPUT TYPE="checkbox" NAME="pestañas" VALUE="importantdates">
+                    <span class="checkmark"></span>    
+                    Important dates
+                    </label>
+                </p>
+                </div>
+                </div>
+                <button type="submit" class="envios">Continuar</button>
+            </form>
+        </div>
     </body>
 </html>

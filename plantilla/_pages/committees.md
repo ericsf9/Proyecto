@@ -6,6 +6,7 @@ classes: wide
 redirect_from:
 - "/organizers/"
 ---
+{% if committees %}
 
 ## Workshop Chairs
 {% for chair in committees['Workshop chairs'] %}
@@ -24,3 +25,4 @@ redirect_from:
 * {{chair3['Committee content']}}
 {% endfor %}
 {% endfor %}
+{% endif %}

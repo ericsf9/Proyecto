@@ -3,31 +3,46 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Important Dates de tu web</h2>
 
-        <form method="post" action="/resumen-final">
-        Fechas importantes *
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
+        <div class="textoint">
+            Fechas importantes *
+        </div>
         <div class="contenedor-idates">
             <div class="idates">
                 <p>
-                    Contenido o acciones de la fecha *
-                    <INPUT TYPE="text" NAME="Important date action">
+                    <div class="textoin">
+                        <p>
+                            Contenido o acciones de la fecha *
+                        </p>
+                        <INPUT TYPE="text" NAME="Important date action">
+                    </div>
                 </p>
                 <p>
-                    Fecha *
-                    <INPUT TYPE="text" NAME="Important date date">
+                    <div class="textoin">
+                        <p>
+                            Fecha *
+                        </p>
+                        <INPUT TYPE="text" NAME="Important date date">
+                    </div>
                 </p>        
             </div>
-            <button class="anadirIdate" type="button">mas</button>
-            <button class="quitarIdate" type="button">menos</button>
+                <button class="anadirIdate" type="button">Añadir Fecha</button>
+                <button class="quitarIdate" type="button">Quitar Fecha</button>
         </div>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='important-dates.js') }}"></script>
+        </div>
     </body>
 </html>

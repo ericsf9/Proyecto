@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div class="masthead">
+        <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
+        <h2>Hosting de la página web generada</h2>
+
+        <div class="textoin">
+        Estas son las instrucciones para el establecimiento del hosting
+
+        <p>
+            Para el establecimiento del hosting gratuito debe registrarse en github.com usando como nombre de usuario el nombre de dominio que desee para su pagina web. 
+        </p>
+        <p>
+            A continuación debera de generar un classic token y seleccionar las casillas "repo" y "workflow" de este.
+        </p>
+        <p>
+            Todo ello para posteriormente introducir dicho token a continuación en su correspondiente campo.
+        </p>
+        <p>
+            En el ultimo campo debera de introducir el nombre de dominio que desea que debera coincidir con el nombre de usuario con el que se ha registrado.
+        </p>
+        </div>
+        <form method="post" action="/informacion-final">
+        <p>
+            <div class="textoin">
+                <p>
+                    Token de GitHub *
+                </p>
+                <INPUT TYPE="text" NAME="token">
+            </div>
+        </p>
+
+        <p>
+            <div class="textoin">
+                <p>
+                    Nombre del usuario de GitHub *
+                </p>
+                <INPUT TYPE="text" NAME="nombre_repositorio">
+            </div>
+        </p>
+        <button type="submit" class="envios">Continuar</button>
+        </form>
+        </div>
+        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <script>
+            {% for message in messages %}
+                alert({{ message | tojson }});
+            {% endfor %}
+        </script>
+        {% endif %}
+        {% endwith %}
+    </body>
+</html>

@@ -3,19 +3,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Proceedings de tu web</h2>
         
-        <form method="post" action="/awards">
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
         <p>
-            Información de Proceedings *
-            <INPUT TYPE="text" NAME="Proceedings information">
+            <div class="textoin">
+                <p>
+                    Información de Proceedings *
+                </p>
+                <textarea NAME="Proceedings information" rows="10" cols="100"></textarea>
+            </div>
         </p>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
-
+        </div>
     </body>
 </html>

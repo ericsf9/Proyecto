@@ -3,62 +3,91 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Committees de tu web</h2>
         
-        <form method="post" action="/history">
-        Workshop chairs (Ver cual es la traduccion y meter la variabilidad de modo que pueda ser tanto para workshop como para un congreso grande) *
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
+        <div class="textoint">
+            Workshop chairs (Ver cual es la traduccion y meter la variabilidad de modo que pueda ser tanto para workshop como para un congreso grande) *
+        </div>
         <div class="contenedor-wchairs">
             <div class="wchairs">
                 <p>
-                    Workshop chair *
-                    <INPUT TYPE="text" NAME="Workshop chair content">
+                    <div class="textoin">
+                        <p>
+                            Workshop chair *
+                        </p>
+                        <INPUT TYPE="text" NAME="Workshop chair content">
+                    </div>
                 </p>        
             </div>
-            <button class="anadirWchair" type="button">mas</button>
-            <button class="quitarWchair" type="button">menos</button>
+                <button class="anadirWchair" type="button">Añadir Miembro</button>
+                <button class="quitarWchair" type="button">Quitar Miembro</button>
         </div>
 
+        <div class="textoint">
         Program chairs *
+        </div>
         <div class="contenedor-pchairs">
             <div class="pchairs">
                 <p>
-                    Program chair *
-                    <INPUT TYPE="text" NAME="Program chair content">
+                    <div class="textoin">
+                        <p>
+                            Program chair *
+                        </p>
+                        <INPUT TYPE="text" NAME="Program chair content">
+                    </div>
                 </p>        
             </div>
-            <button class="anadirPchair" type="button">mas</button>
-            <button class="quitarPchair" type="button">menos</button>
+                <button class="anadirPchair" type="button">Añadir Miembro</button>
+                <button class="quitarPchair" type="button">Quitar Miembro</button>
         </div>
 
+        <div class="textoint">
         Comites adicionales *
+        </div>
         <div class="contenedor-comites">
             <div class="comites">
                 <p>
-                    Nombre del comite *
-                    <INPUT TYPE="text" NAME="Committee title">
+                    <div class="textoin">
+                        <p>
+                            Nombre del comite *
+                        </p>
+                        <INPUT TYPE="text" NAME="Committee title">
+                    </div>
                 </p>
+                <div class="textoint">
                 Componentes del comite
+                </div>
                 <div class="contenedor-cchairs">
                     <div class="cchairs">
                         <p>
-                            Componente del comite
-                            <INPUT TYPE="text" NAME="Committee content">
+                            <div class="textoin">
+                                <p>
+                                    Componente del comite
+                                </p>
+                                <INPUT TYPE="text" NAME="Committee content">
+                            </div>
                         </p>
                     </div>
-                    <button class="anadirChair" type="button">mas Chair</button>
-                    <button class="quitarChair" type="button">menos</button>
+                        <button class="anadirChair" type="button">Añadir Miembro</button>
+                        <button class="quitarChair" type="button">Quitar Miembro</button>
                 </div>
             </div>
-            <button class="anadirComite" type="button">mas</button>
-            <button class="quitarComite" type="button">menos</button>
+                <button class="anadirComite" type="button">Añadir Comité</button>
+                <button class="quitarComite" type="button">Quitar Comité</button>
         </div>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='committees.js') }}"></script>
+        </div>
     </body>
 </html>

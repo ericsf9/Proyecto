@@ -1,8 +1,8 @@
 ---
-title: 'XVII Congreso de variabilidad<br><span style="font-size: 60%;">Malaga, Spain. 15-16 October, 2026</span>'
+title: '<br><span style="font-size: 60%;">. </span>'
 permalink: "/"
 header:
-  overlay_image: 'assets/confws/bg_bologna.jpg'
+  overlay_image: ''
   overlay_filter: 0.3
   caption: '[Bologna, Italy](https://www.bolognawelcome.com/en/blog/top-10-things-to-do-in-bologna-)'
 author_profile: true
@@ -19,17 +19,17 @@ AQUI ANTES ESTABA ABIERTO EL LINK PARA EL REGISTRO EN LA PAGINA PRINCIPAL PODEMO
 # [Registration](https://confws.github.io/registration/) is open now.
 -->
 
-**XVII Congreso de variabilidad**
+****
 
-<img style="float: right; width: 400px;" src="assets/confws/confws-2025-logo.png">
+<img style="float: right; width: 400px;" src="">
 
 ---
-- 15-16 October, 2026
-- Malaga, Spain
-- Format: Onsite
+- 
+- 
+- Format: 
 
-# XVII Congreso de variabilidad aims
-Hola buenas esto seria el contenido de los objetivos...
+#  aims
+
 
 
 ---

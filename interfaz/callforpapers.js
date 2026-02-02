@@ -32,6 +32,11 @@ function clonarElemento(claseOriginal, claseContenedor, e){
         copia.querySelectorAll('input, select, textarea').forEach(n => n.value = '');
 
         e.target.before(copia)
+
+        if (claseOriginal == '.secciones'){
+            renombrar(padre, claseOriginal)
+        }
+        
     }
 }
 
@@ -45,4 +50,23 @@ function eliminarElemento(claseOriginal, claseContenedor, e){
     if(elementos.length > 1){
         elementos[elementos.length - 1].remove();
     }
+}
+
+function renombrar(contenedor, elementoC){
+    const elementos = contenedor.querySelectorAll(':scope > ' + elementoC)
+
+    elementos.forEach((elemento, indice) => {
+        
+        elemento.querySelectorAll('input, select, textarea').forEach(input => {
+            const nombreBase = input.name.split('[')[0];
+
+            if (indice == 0){
+                input.name = nombreBase
+            }else{
+                input.name = `${nombreBase}${indice + 1}`
+            }
+            
+        })
+
+    })
 }

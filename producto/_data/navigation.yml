@@ -9,19 +9,5 @@ main:
      
   - title: "Program"
     url: /program/
-  - title: "Proceedings"
-    url: /proceedings/
-  - title: "Awards"
-    url: /awards/
-  - title: "Keynotes"
-    url: /keynotes/
   - title: "Registration"
     url: /registration/
-  - title: "Venue"
-    url: /venue/
-   
-  - title: "Committees"
-    url: /committees/
-    
-  - title: "History"
-    url: /history/

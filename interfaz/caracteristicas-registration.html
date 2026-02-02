@@ -3,85 +3,143 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Registration de tu web</h2>
         
-        <form method="post" action="/sponsors">
-        Fechas de Registro *
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
+        <div class="textoint">
+            Fechas de Registro *
+        </div>
         <div class="contenedor-fechas">
             <div class="fechas">
                 <p>
-                    Tipo de registro *
-                    <INPUT TYPE="text" NAME="Deadline title">
+                    <div class="textoin">
+                        <p>
+                            Tipo de registro *
+                        </p>
+                        <INPUT TYPE="text" NAME="Deadline title">
+                    </div>
                 </p>
                 <p>
-                    Fecha de registro *
-                    <INPUT TYPE="text" NAME="Deadline timelapse">
+                    <div class="textoin">
+                        <p>
+                            Fecha de registro *
+                        </p>
+                        <INPUT TYPE="text" NAME="Deadline timelapse">
+                    </div>
                 </p>        
             </div>
-            <button class="anadirFecha" type="button">mas</button>
-            <button class="quitarFecha" type="button">menos</button>
+                <button class="anadirFecha" type="button">Añadir Fecha</button>
+                <button class="quitarFecha" type="button">Quitar Fecha</button>
         </div>
 
+        <p>
+            <div class="textoin">
+                <p>
+                    Link para registrarse
+                </p>
+                <INPUT TYPE="text" NAME="Registration link">
+            </div>
+        </p>
+
+        <div class="textoint">
         Paquetes de Registro *
+        </div>
         <div class="contenedor-paquetes">
             <div class="paquetes">
                 <p>
-                    Nombre del paquete *
-                    <INPUT TYPE="text" NAME="Package name">
+                    <div class="textoin">
+                        <p>
+                            Nombre del paquete *
+                        </p>
+                        <INPUT TYPE="text" NAME="Package name">
+                    </div>
                 </p>
+                <div class="textoint">
                 Categorias de Registro
+                </div>
                 <div class="contenedor-categorias">
                     <div class="categorias">
                         <p>
-                            Nombre de la categoria
-                            <INPUT TYPE="text" NAME="Category name">
+                            <div class="textoin">
+                                <p>
+                                    Nombre de la categoria
+                                </p>
+                                <INPUT TYPE="text" NAME="Category name">
+                            </div>
                         </p>
+                        <div class="textoint">
                         Precios de Registro
+                        </div>
                         <div class="contenedor-precios">
                             <div class="precios">
                                 <p>
-                                    Precio del registro
-                                    <INPUT TYPE="text" NAME="Registration cost">
+                                    <div class="textoin">
+                                        <p>
+                                            Precio del registro
+                                        </p>
+                                        <INPUT TYPE="text" NAME="Registration cost">
+                                    </div>
                                 </p>
                             </div>
-                            <button class="anadirPrecio" type="button">mas PR</button>
-                            <button class="quitarPrecio" type="button">menos</button>
+                                <button class="anadirPrecio" type="button">Añadir Precio</button>
+                                <button class="quitarPrecio" type="button">Quitar Precio</button>
                         </div>
                     </div>
-                    <button class="anadirCategoria" type="button">mas Cat</button>
-                    <button class="quitarCategoria" type="button">menos</button>
+                        <button class="anadirCategoria" type="button">Añadir Categoría</button>
+                        <button class="quitarCategoria" type="button">Quitar Categoría</button>
                 </div>
             </div>
-            <button class="anadirPaquete" type="button">mas Pa</button>
-            <button class="quitarPaquete" type="button">menos</button>
+                <button class="anadirPaquete" type="button">Añadir Paquete</button>
+                <button class="quitarPaquete" type="button">Quitar Paquete</button>
         </div>
 
 
         <p>
-            Información de Registro
-            <INPUT TYPE="text" NAME="Registration fees info">
+            <div class="textoin">
+                <p>
+                    Información de Registro
+                </p>
+                <textarea NAME="Registration fees info" rows="10" cols="100"></textarea>
+            </div>
         </p>
         <p>
-            Estado del Registro
-            <INPUT TYPE="text" NAME="Registration status">
+            <div class="textoin">
+                <p>
+                    Estado del Registro
+                </p>
+                <INPUT TYPE="text" NAME="Registration status">
+            </div>
         </p>
 
         <p>
-            Título de la information adicional del registro
-            <INPUT TYPE="text" NAME="Registration further info title">
+            <div class="textoin">
+                <p>
+                    Título de la information adicional del registro
+                </p>
+                <INPUT TYPE="text" NAME="Registration further info title">
+            </div>
         </p>
 
         <p>
-            Contenido de la informacion adicional del registro
-            <INPUT TYPE="text" NAME="Registration further info content">
+            <div class="textoin">
+                <p>
+                    Contenido de la informacion adicional del registro
+                </p>
+                <textarea NAME="Registration further info content" rows="10" cols="100"></textarea>
+            </div>
         </p>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='registration.js') }}"></script>
+        </div>
     </body>
 </html>

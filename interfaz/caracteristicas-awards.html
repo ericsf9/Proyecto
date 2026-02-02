@@ -3,37 +3,55 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Awards de tu web</h2>
         
-        <form method="post" action="/keynotes">
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
         <p>
-            Información de los premios *
-            <INPUT TYPE="text" NAME="Awards information">
+            <div class="textoin">
+                <p>
+                    Información de los premios *
+                </p>
+                <textarea NAME="Awards information" rows="10" cols="100"></textarea>
+            </div>
         </p>
 
-
+        <div class="textoint">
         Premios del congreso *
+        </div>
         <div class="contenedor-premios">
             <div class="premios">
                 <p>
-                    Titulo del premio *
-                    <INPUT TYPE="text" NAME="Award title">
+                    <div class="textoin">
+                        <p>
+                            Titulo del premio *
+                        </p>
+                        <INPUT TYPE="text" NAME="Award title">
+                    </div>
                 </p>
                 <p>
-                    Contenido del premio *
-                    <INPUT TYPE="text" NAME="Award content">
+                    <div class="textoin">
+                        <p>
+                            Contenido del premio *
+                        </p>
+                        <textarea NAME="Award content" rows="10" cols="100"></textarea>
+                    </div>
                 </p>        
             </div>
-            <button class="anadirPremio" type="button">mas</button>
-            <button class="quitarPremio" type="button">menos</button>
+                <button class="anadirPremio" type="button">Añadir Premio</button>
+                <button class="quitarPremio" type="button">Quitar Premio</button>
         </div>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='awards.js') }}"></script>
+        </div>
     </body>
 </html>

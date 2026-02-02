@@ -3,67 +3,109 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
-        <h1>Generador de Páginas Web de Congresos</h1>
+        <div class="masthead">
+            <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Call for Papers de tu web</h2>
 
         <form method="post" action="/program">
-        Fechas importantes *
+        
+        <div class="textoint">
+            Fechas importantes *
+        </div>
         <div class="contenedor-fechas">
             <div class="fechas">
-                <p>
-                    Descripción *
-                    <INPUT TYPE="text" NAME="description">
-                </p>
-                <p>
-                    Fecha *
-                    <INPUT TYPE="text" NAME="cdate">
-                </p>
+                
+                    <div class="textoin">
+                        <p>
+                            Descripción *
+                        </p>
+                        <INPUT TYPE="text" NAME="description">
+                    </div>
+                
+                
+                    <div class="textoin">
+                        <p>
+                            Fecha *
+                        </p>
+                        <INPUT TYPE="text" NAME="cdate">
+                    </div>
+                
             </div>
-            <button class="anadirFecha" type="button">mas</button>
-            <button class="quitarFecha" type="button">menos</button>
+            
+                <button class="anadirFecha" type="button">Añadir Fecha</button>
+                <button class="quitarFecha" type="button">Quitar Fecha</button>
+            
         </div>
         
+        <div class="textoint">
         Secciones *
+        </div>
         <div class="contenedor-secciones">
             <div class="secciones">
                 <p>
-                    Título *
-                    <INPUT TYPE="text" NAME="sectitle">
+                    <div class="textoin">
+                        <p>
+                            Título *
+                        </p>
+                        <INPUT TYPE="text" NAME="sectitle">
+                    </div>
                 </p>
                 <p>
-                    Contenido *
-                    <INPUT TYPE="text" NAME="seccontent">
+                    <div class="textoin">
+                        <p>
+                        Contenido *
+                        </p>
+                        <textarea NAME="seccontent" rows="10" cols="100"></textarea>
+                    </div>
                 </p>
+                <div class="textoint">
                 Subsecciones
+                </div>
                 <div class="contenedor-subsecciones">
                     <div class="subsecciones">
                         <p>
-                            Título s *
-                            <li><INPUT TYPE="text" NAME="subsectitle">
+                            <div class="textoin">
+                                <p>
+                                Título s *
+                                </p>
+                                <INPUT TYPE="text" NAME="subsectitle">
+                            </div>
                         </p>
                         <p>
-                            Contenido s *
-                            <li><INPUT TYPE="text" NAME="subseccontent">
+                            <div class="textoin">
+                                <p>
+                                    Contenido s *
+                                </p>
+                                <textarea NAME="subseccontent" rows="10" cols="100"></textarea>
+                            </div>
                         </p>
                     </div>
-                    <button class="anadirSubseccion" type="button">mas Sub</button>
-                    <button class="quitarSubseccion" type="button">menos</button>
+                        <button class="anadirSubseccion" type="button">Añadir Subsección</button>
+                        <button class="quitarSubseccion" type="button">Quitar Subsección</button>
                 </div>
                 <p>
-                    Contenido Adicional*
-                    <INPUT TYPE="text" NAME="seccontent2">
+                    <div class="textoin">
+                        <p>
+                            Contenido Adicional*
+                        </p>
+                        <textarea NAME="seccontentp" rows="10" cols="100"></textarea>
+                    </div>
                 </p>
             </div>
-            <button class="anadirSeccion" type="button">mas</button>
-            <button class="quitarSeccion" type="button">menos</button>
+                <button class="anadirSeccion" type="button">Añadir Sección</button>
+                <button class="quitarSeccion" type="button">Quitar Sección</button>
         </div>
 
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='callforpapers.js') }}"></script>
+        </div>
     </body>
 </html>

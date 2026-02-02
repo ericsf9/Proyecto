@@ -3,35 +3,54 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de los Sponsors de tu web</h2>
         
-        <form method="post" action="/proceedings">
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
+        <div class="textoint">
         Sponsors del congreso *
+        </div>
         <div class="contenedor-sponsors">
             <div class="sponsors">
                 <p>
-                    Link del Sponsor *
-                    <INPUT TYPE="text" NAME="Sponsor url">
+                    <div class="textoin">
+                        <p>
+                            Link del Sponsor *
+                        </p>
+                        <INPUT TYPE="text" NAME="Sponsor url">
+                    </div>
                 </p>
                 <p>
-                    Logo del Sponsor *
-                    <INPUT TYPE="text" NAME="Sponsor logo">
+                    <div class="textoin">
+                        <p>
+                            Logo del Sponsor *
+                        </p>
+                        <INPUT TYPE="text" NAME="Sponsor logo">
+                    </div>
                 </p>
                 <p>
-                    Nombre del Sponsor *
-                    <INPUT TYPE="text" NAME="Sponsor name">
+                    <div class="textoin">
+                        <p>
+                            Nombre del Sponsor *
+                        </p>
+                        <INPUT TYPE="text" NAME="Sponsor name">
+                    </div>
                 </p>        
             </div>
-            <button class="anadirSponsor" type="button">mas</button>
-            <button class="quitarSponsor" type="button">menos</button>
+                <button class="anadirSponsor" type="button">Añadir Sponsor</button>
+                <button class="quitarSponsor" type="button">Quitar Sponsor</button>
         </div>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='sponsors.js') }}"></script>
+        </div>
     </body>
 </html>

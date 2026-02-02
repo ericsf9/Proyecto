@@ -3,13 +3,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
-        <h1>Generador de Páginas Web de Congresos</h1>
-        <h2>Comenzar con la selección de características</h2>
-        <h2>RECORDAR BUSCAR CUALES SON LAS BUENAS PRACTICAS A LA HORA DE HACER HTML E IMPLEMENTARLAS</h2>
-        <form method="get" action="/pestanas">
-        <button type="submit">Pulse aquí</button>
-        </form>
+        <div class="masthead">
+            <h1>Generador de Páginas Web de Congresos (Ver si es buena idea lo de esta cabecera)</h1>
+        </div>
+        <div class="bd">
+            <h2>Genera tu propia página web para tu propio congreso</h2>
+            <h3>
+                Gracias a esta aplicación es posible crear tu propia página web para tu congreso sin 
+                conocimientos previos. Además se trata de un proceso sencillo que se asimila al hecho de 
+                pedir una pizza al gusto, es decir, seleccionando las características/objetos que se desean tener
+                para la página a su gusto personal.
+            </h3>
+            <div class="a3">
+                <div class="izquierda">
+                    <h2>ALTA PERSONALIZACIÓN</h2>
+                    <h3>Esta aplicación permite una alta personalización para que le sea posible generar una página web a su medida...</h3>
+                </div>
+                <div class="medio">
+                    <h2>FÁCIL UTILIZACIÓN</h2>
+                    <h3>Esta aplicación es facil de usar...</h3>
+                </div>
+                <div class="derecha">
+                    <h2>PUESTA A PUNTO</h2>
+                    <h3>Esta aplicación permite una puesta a punto sencilla para su web...</h3>
+                </div>    
+            </div>
+            <h2>Comenzar con la selección de características</h2>
+            <h2>RECORDAR BUSCAR CUALES SON LAS BUENAS PRACTICAS A LA HORA DE HACER HTML E IMPLEMENTARLAS</h2>
+            <form method="get" action="/pestanas">
+                <button type="submit" class="envios">Comenzar con la generación</button>
+            </form>
+        </div>
     </body>
 </html>

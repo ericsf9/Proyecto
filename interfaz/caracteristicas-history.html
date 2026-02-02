@@ -3,41 +3,63 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña History de tu web</h2>
         
-        <form method="post" action="/important-dates">
+        <form method="post" action="{{ url_for('procesar_pestanas') }}">
         <p>
-            Información de la historia del congreso *
-            <INPUT TYPE="text" NAME="History information">
+            <div class="textoin">
+                <p>
+                    Información de la historia del congreso *
+                </p>
+                <textarea NAME="History information" rows="10" cols="100"></textarea>
+            </div>
         </p>
 
-
+        <div class="textoint">
         Eventos anteriores *
+        </div>
         <div class="contenedor-eventos">
             <div class="eventos">
                 <p>
-                    Nombre del evento *
-                    <INPUT TYPE="text" NAME="History event title">
+                    <div class="textoin">
+                        <p>
+                            Nombre del evento *
+                        </p>
+                        <INPUT TYPE="text" NAME="History event title">
+                    </div>
                 </p>
                 <p>
-                    Lugar del evento *
-                    <INPUT TYPE="text" NAME="History event venue">
+                    <div class="textoin">
+                        <p>
+                            Lugar del evento *
+                        </p>
+                        <INPUT TYPE="text" NAME="History event venue">
+                    </div>
                 </p>
                 <p>
-                    Contenido del evento *
-                    <INPUT TYPE="text" NAME="History event content">
+                    <div class="textoin">
+                        <p>
+                            Contenido del evento *
+                        </p>
+                        <textarea NAME="History event content" rows="10" cols="100"></textarea>
+                    </div>
                 </p>        
             </div>
-            <button class="anadirEvento" type="button">mas</button>
-            <button class="quitarEvento" type="button">menos</button>
+                <button class="anadirEvento" type="button">Añadir Evento</button>
+                <button class="quitarEvento" type="button">Quitar Evento</button>
         </div>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='history.js') }}"></script>
+        </div>
     </body>
 </html>

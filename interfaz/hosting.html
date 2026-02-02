@@ -3,16 +3,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Hosting de la página web generada</h2>
 
+        <div class="textoint">
         ¿Desea establecer el hosting gratuito de la página?
-        
-        <button class="hosting">Si</button>
-        <button class="sinhosting">No</button>
-
-        <script src="important-dates.js"></script>
+        </div>
+        <div class="botcon">
+        <form method="post" action="/instrucciones-hosting">
+            <button class="envioht" type="submit">Si</button>
+        </form>
+        <form method="post" action="/sin-hosting">
+            <button class="envioht" type="submit">No</button>
+        </form>
+        </div>
+        </div>
     </body>
 </html>

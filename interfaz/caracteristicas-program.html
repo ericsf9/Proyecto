@@ -3,57 +3,88 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
+        <div class="masthead">
         <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
         <h2>Rellena el contenido de la pestaña Program de tu web</h2>
 
         <form method="post" action="/registration">
-        <p>
-            Información del programa *
-            <INPUT TYPE="text" NAME="Program information">
-        </p>
-        
+        <div class="textoin">
+            <p>
+                Información del programa *
+            </p>    
+            <textarea NAME="Program information" rows="10" cols="100"></textarea>
+        </div>
+
+        <div class="textoint">
         Días del congreso *
+        </div>
         <div class="contenedor-dias">
             <div class="dias">
                 <p>
-                    Información del dia *
-                    <INPUT TYPE="text" NAME="Day information">
+                    <div class="textoin">
+                        <p>
+                            Información del dia *
+                        </p>
+                        <INPUT TYPE="text" NAME="Day information">
+                    </div>
                 </p>
 
+                <div class="textoint">
                 Eventos *
+                </div>
                 <div class="contenedor-eventos">
                     <div class="eventos">
                         <p>
-                            Intervalo de tiempo *
-                            <INPUT TYPE="text" NAME="timelapse">
+                            <div class="textoin">
+                                <p>
+                                    Intervalo de tiempo *
+                                </p>
+                                <INPUT TYPE="text" NAME="timelapse">
+                            </div>
                         </p>
                         <p>
-                            Contenido del evento *
-                            <INPUT TYPE="text" NAME="eventscontent">
+                            <div class="textoin">
+                                <p>
+                                    Contenido del evento *
+                                </p>
+                                <INPUT TYPE="text" NAME="eventscontent">
+                            </div>
                         </p>
                     </div>
-                    <button class="anadirEvento" type="button">mas</button>
-                    <button class="quitarEvento" type="button">menos</button>
+                        <button class="anadirEvento" type="button">Añadir Evento</button>
+                        <button class="quitarEvento" type="button">Quitar Evento</button>
                 </div>
             </div>
-            <button class="anadirDia" type="button">mas Dia</button>
-            <button class="quitarDia" type="button">menos</button>
+                <button class="anadirDia" type="button">Añadir Día</button>
+                <button class="quitarDia" type="button">Quitar Día</button>
         </div>
 
         <p>
-            Titulo de la Información Adicional*
-            <INPUT TYPE="text" NAME="Further program information title">
+            <div class="textoin">
+                <p>
+                    Titulo de la Información Adicional*
+                </p>
+                <INPUT TYPE="text" NAME="Further program information title">
+            </div>
         </p>
         <p>
-            Contenido de la Información Adicional*
-            <INPUT TYPE="text" NAME="Further program information content">
+            <div class="textoin">
+                <p>
+                    Contenido de la Información Adicional*
+                </p>
+                <textarea NAME="Further program information content" rows="10" cols="100"></textarea>
+            </div>
         </p>
 
-        <button type="submit">Pulse aquí para continuar</button>
+        <button type="submit" class="envios">Pulse aquí para continuar</button>
         </form>
 
         <script src="{{ url_for('static', filename='program.js') }}"></script>
+        </div>
     </body>
 </html>

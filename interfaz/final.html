@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div class="masthead">
+        <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd2">
+        <h2>Hosting de la página web generada</h2>
+
+        <div class="textoin">
+        Enhorabuena su pagina ya ha sido establecida en GitHub Pages puede ver el resultado final de la misma 
+        en el siguiente enlace. 
+        <p>
+        ATENCION: GitHub Pages puede tardar unos 30 segundos en terminar de establecer la página. No se asuste si no sale su página antes de este tiempo prudencial de unos 30 segundos.
+        </p>
+        </div>
+
+        <a href="https://{{usuario}}.github.io/">
+            <button class="envios2">Visitar la página</button>
+        </a>
+
+        <div class="textoin">
+            <p>
+                Además usted, si tiene conocimientos previos, puede visitar el repositorio del proyecto en GitHub.
+            </p>
+        </div>
+
+        <div class="warning">
+            ADVERTENCIA
+        </div>
+
+        <div class="textoin">
+            <p>
+                SI NO SE POSEEN CONOCIMIENTOS PREVIOS PUEDE DAÑARSE EL PRODUCTO. SI ESTO OCURRIERA PUEDE VOLVER A GENERAR LA PÁGINA WEB A TRAVÉS DE LA APLICACIÓN.
+            </p>
+        </div>
+
+        <a href="https://github.com/{{usuario}}/{{usuario}}.github.io/">
+            <button class="envios2">Visitar el repositorio en GitHub</button>
+        </a>
+
+        <div class="btnfin">
+        <form method="post" action="{{ url_for('inicio') }}">
+            <button class="envios2" type="submit">Volver al inicio</button>
+        </form>
+        </div>
+
+        
+        </div>
+    </body>
+</html>

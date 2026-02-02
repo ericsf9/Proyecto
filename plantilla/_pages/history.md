@@ -5,6 +5,7 @@ author_profile: true
 sitemap: false
 classes: wide
 ---
+{% if history %}
 
 ---
 {{history['History information']}}
@@ -20,3 +21,4 @@ Probar a despues implementar lo de meter los links de los titulos que seria tal 
   - {{event['History event venue']}}
 <br><sub>{{event['History event content']}}.</sub>
 {% endfor %}
+{% endif %}

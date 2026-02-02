@@ -3,44 +3,81 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Generador de Páginas Web de Congresos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
-        <h1>Generador de Páginas Web de Congresos</h1>
-        <h2>Rellena el contenido de la página principal de tu web</h2>
-        <form method="post" action="/callforpapers">
-        <p>
-        Nombre del Congreso *
-        <INPUT TYPE="text" NAME="Conference name">
-        </p>
-        <p>
-        Fechas del Congreso *
-        <INPUT TYPE="text" NAME="Conference date">
-        </p>
-        <p>
-        Localización del Congreso *
-        <INPUT TYPE="text" NAME="Conference venue">
-        </p>
-        <p>
-        Formato del Congreso *
-        <INPUT TYPE="text" NAME="Conference format">
-        </p>
-        <p>
-        Imagen de la cabecera (esto es un String que deberiamos de mirar si poner algo para subir un documento o poner el nombre para posteriormente subir todas las imagenes antes de terminar y resolver así la ruta)
-        <INPUT TYPE="text" NAME="headerimage">
-        </p>
-        <p>
-        Logo del Congreso
-        <INPUT TYPE="text" NAME="logoimage">
-        </p>
-        <p>
-        Nombre corto del Congreso 
-        <INPUT TYPE="text" NAME="Short name for the conference">
-        </p>
-        <p>
-        Objetivos del Congreso (Contenido de la seccion objetivos)
-        <INPUT TYPE="text" NAME="aimscontent">
-        </p>
-        <button type="submit">Pulse aquí para continuar</button>
-        </form>
+        <div class="masthead">
+            <h1>Generador de Páginas Web de Congresos</h1>
+        </div>
+        <div class="bd">
+            <h2>Rellena el contenido de la página principal de tu web</h2>
+            <form method="post" action="/callforpapers">
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Nombre del Congreso *
+                        </p>
+                        <INPUT TYPE="text" NAME="Conference name">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Fechas del Congreso *
+                        </p>
+                        <INPUT TYPE="text" NAME="Conference date">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Localización del Congreso *
+                        </p>
+                        <INPUT TYPE="text" NAME="Conference venue">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Formato del Congreso *
+                        </p>
+                        <INPUT TYPE="text" NAME="Conference format">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Imagen de la cabecera (esto es un String que deberiamos de mirar si poner algo para subir un documento o poner el nombre para posteriormente subir todas las imagenes antes de terminar y resolver así la ruta)
+                        </p>
+                        <INPUT TYPE="text" NAME="headerimage">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Logo del Congreso
+                        </p>
+                        <INPUT TYPE="text" NAME="logoimage">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Nombre corto del Congreso 
+                        </p>
+                        <INPUT TYPE="text" NAME="Short name for the conference">
+                    </div>
+                </p>
+                <p>
+                    <div class="textoin">
+                        <p>
+                        Objetivos del Congreso (Contenido de la seccion objetivos)
+                        </p>
+                        <textarea NAME="aimscontent" rows="10" cols="100"></textarea>
+                    </div>
+                </p>
+                <button type="submit" class="envios">Pulse aquí para continuar</button>
+            </form>
+        </div>
     </body>
 </html>
